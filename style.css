@@ -1,0 +1,406 @@
+/* dark color #191825
+
+second color #865DFF
+
+third color #E384FF */
+
+*{
+ padding: 0;
+ margin: 0;
+ font-family: 'Golos Text', sans-serif;
+}
+
+body{
+ background-color: #EEEEEE;
+}
+a{
+ text-decoration: none;
+ color: black;
+}
+
+nav{
+ position: fixed;
+ background-color:#191825;
+ width: 20%;
+ height: 100vh;
+ text-align: center;
+}
+
+.sidebar{
+ background-color: aliceblue;
+ margin-left:-1rem ;
+ padding: 0.8rem 8rem 0.8rem 1rem;
+ border-radius: 8px;
+ color: rgb(0, 0, 0);
+ transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.sidebar:hover{
+ background-color: #865DFF;
+ color: white;
+}
+
+nav li{
+ padding-top: 3rem;
+ transform: translateY(2rem);
+}
+
+#logo{
+ padding-top: 1rem;
+ margin-left: -7rem;
+}
+
+#LogOutBtn{
+ transform: translateY(11rem);
+ transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#login{
+  background-color: aliceblue;
+  margin-left:-1rem ;
+  padding: 0.8rem 8.5rem 0.8rem 1rem;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  position: relative;
+  top: 9rem;
+  cursor: pointer;
+}
+
+#login:hover{
+  background-color: #087d54;
+  color: white;
+}
+
+#LogOutBtn a:hover{
+ background-color: rgb(217, 25, 25);
+ color: white ;
+}
+
+#Profile{
+ width: 80%;
+ border-radius: 8px;
+ padding: 1px 10px 25px 0px;
+ color: white;
+ transform: translate(1rem,12rem);
+ cursor: pointer;
+}
+
+#Profile img{
+ border-radius: 50%;
+ transform: translate(-0.5rem,1rem);
+
+}
+
+#Profile:hover{
+ background-color: #3c3b4b7f;
+}
+
+.PostsContainer{
+ position: relative;
+ left: 20%;
+ height: 100vh;
+ width: 80%;
+}
+.Post{
+ background-color: rgb(255, 255, 255);
+ box-shadow: 6px 6px 21px -5px;
+ border-radius: 8px;
+ width:60% ;
+ height: 85%;
+ overflow: hidden;
+ position: relative;
+ left: 25%;
+ top: 1rem;
+
+}
+
+.PostUser img{
+ border-radius: 50%;
+ transform: translate(1.5rem,0.8rem);
+ cursor: pointer;
+}
+
+.PostUser span{
+ position: relative;
+ left: 1.7rem;
+ cursor: pointer;
+}
+
+.postImage{
+ width: 100%;
+ max-height: 400px;
+ transform: translateY(1rem);
+}
+
+.comments{
+ color: black;
+ position: relative;
+ right: 4rem;
+ top: 2.5rem;
+}
+
+.tag{
+ background-color: #191825;
+ color: white;
+ border-radius: 8px;
+ padding:0.3rem 1rem 0.3rem 1rem ;
+ position: relative;
+ right: 2rem;
+ top: 2.5rem;
+}
+
+.addPost{
+ background-color: #4000ff;
+ color: white;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ font-size: larger;
+ font-weight: bolder;
+ text-align: center;
+ cursor: pointer;
+ position: fixed;
+  left: 90%;
+  top: 90%;
+  z-index: 2;
+  color: white;
+}
+
+#plusIcon{
+ transform: translateY(0.6rem);
+}
+
+.loginPopUp{
+  width: 400px ;
+  height: 450px;
+  background-color:#191825;
+  color: white;
+  position: fixed;
+  left: 40%;
+  top: 15%;
+  border-radius: 10px;
+  border: solid #181634 2px;
+  z-index: 5;
+  text-align: center;
+  align-items:center ;
+  transform: translateY(-80%) scale(0.1);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 6px 6px 21px -5px black;
+}
+
+#exitIcon{
+  color: white;
+  font-size: 27px;
+  transform: translate(21rem,-1.5rem);
+  cursor: pointer;
+}
+
+.loginPopUp span{
+ font-size: 35px;
+}
+
+#username{
+  /* transform: translateY(7rem); */
+  position: relative;
+  font-size: 15px;
+  top: 7rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color:transparent;
+  border-bottom: solid 2px white;
+  border-radius: 2px;
+  color: white;
+}
+
+#user{
+  position: absolute;
+  right:5px;
+  transform: translate(-16rem,2.4rem);
+  font-size: 1em;
+  pointer-events: none;
+  color: #bababa;
+  transition: all 0.3s ease-in-out;
+}
+
+#username:focus ~ #user,
+#username:focus :valid{
+  transform:translate(-16rem,1.6rem);
+  color: white;
+}
+
+#password{
+  position: relative;
+  top: 7rem;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color:transparent;
+  border-bottom: solid 2px white;
+  border-radius: 2px;
+  color: white;
+}
+
+#pass{
+  position: absolute;
+  right:5px;
+  transform: translate(-16rem,5rem);
+  font-size: 1em;
+  color: #bababa;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#password:focus ~ #pass,
+#password:focus  :valid{
+  transform: translate(-16rem,4rem);
+  color: white;
+}
+
+
+.loginPopUp ion-icon{
+  transform: translate(18rem,6.5rem); 
+  font-size: 17px;
+}
+#lockIcon{
+  position: relative;
+  left: 1rem;
+}
+
+.loginPopUpIicons{
+  transform: translate(9rem,8rem);
+  /* z-index: 4; */
+}
+
+#checkbox{
+  font-size: 15px;
+  position: absolute;
+  top: 18rem;
+  right: 4rem;
+}
+
+#checkbox ~ label > a{
+  font-weight: 550;
+  color: rgb(179, 179, 179); 
+}
+
+#loginBtn{
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  outline: none;
+  background-color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transform: translateY(10rem);
+}
+
+#loginBtn ~ span{
+  font-size: 15px;
+  font-weight:300 ;
+  position: absolute;
+  top: 24rem;
+  right: 6rem;
+}
+
+#loginBtn ~ span > a{
+  font-weight: 550;
+  color: rgb(179, 179, 179);
+}
+/*------------------register style------------------------*/
+#registerPopUp{
+  width: 400px ;
+  height: 450px;
+  background-color:#191825;
+  color: white;
+  position: fixed;
+  left: 40%;
+  top: 15%;
+  border-radius: 10px;
+  border: solid #181634 2px;
+  z-index: 5;
+  text-align: center;
+  align-items:center ;
+  transform: translateY(-80%) scale(0.1);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 6px 6px 21px -5px black;
+}
+
+#registerPopUp input[type="text"]{
+  position: relative;
+  top: 5rem;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color:transparent;
+  border-bottom: solid 2px white;
+  border-radius: 2px;
+  color: white;
+}
+#registerPopUp input[type="password"]{
+  position: relative;
+  top: 5rem;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color:transparent;
+  border-bottom: solid 2px white;
+  border-radius: 2px;
+  color: white;
+}
+
+
+#registerPopUp label{
+  position: absolute;
+  right:5px;
+  transform: translate(-16rem,0.5rem);
+  font-size: 1em;
+  color: #bababa;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#registerPopUp input:focus ~ label,
+#registerPopUp input:focus  :valid{
+  transform: translate(-16rem,-0.5rem);
+  color: white;
+}
+
+
+input[type="file"]{
+  background-color: white;
+  width: 80%;
+  height: 3.5rem;
+  border-radius: 25px;
+  transform: translate(-1rem,2.9rem);
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#UploadBtn{
+  background-color: #f1c40f;
+  width: 80%;
+  height: 3rem;
+  border-radius: 25px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size:15px ;
+  cursor: pointer;
+  outline: none;
+  transform: translate(-1rem,6rem);
+  z-index: 2;
+}
+
+#registerPopUp ion-icon{
+  color: white;
+  font-size: 27px;
+  transform: translate(21rem,-1.5rem);
+  cursor: pointer;
+}
