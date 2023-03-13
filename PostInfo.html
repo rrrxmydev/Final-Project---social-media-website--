@@ -8,10 +8,11 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="PostInfostyle.css">
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
  <title>PostInfo</title>
 </head>
 <body>
- <nav>
+ <nav id="navbar">
   <img id="logo" src="rrrxmyy-high-resolution-logo-white-on-transparent-background.png" alt="" width="100px">
   <ul>
    <li><a class="sidebar"href="index.html"> <ion-icon name="home-outline"></ion-icon> Home</a></li> <br>
@@ -19,46 +20,16 @@
    <li onclick="LoginPopup()"><a id="login"><ion-icon name="log-out-outline"></ion-icon> Login</a></li><br>
    <li onclick="registerPopup()"><a id="login" style="padding: 0.8rem 7.7rem 0.8rem 1rem;"><ion-icon name="log-out-outline"></ion-icon> register</a></li><br>
   </ul>
-
-  <!-- <div id="Profile">
-     <img src="JohnSnow.jpg" alt="" width="40px">
-     <span>@rrrxmyy</span>
-  </div> -->
  </nav>
 
  <section class="PostsContainer">
-  <h1 style=" position: relative; top: 2rem; margin-left: 1rem;">rrrxmy Post</h1>
-  <br>
-  <div class="Post">
-   <span class="PostUser">
-    <img src="JohnSnow.jpg" alt="" width="40px">
-    <span> <a href="profile.html"> @rrrxmyy</a></span><br> <br>
-    <span>Lorem,llat quisquam reiciendis. Similique reiciendis laboriosam eum asperiores, quam quia ipsam rerum quis adipisci dolor minus modi officia.</span>
-   </span>
-   <img class="postImage" src="troll 1.jpg" alt="PostPhoto" width="50%">
-   <span style="position: relative;top: 1rem; left: 1.5rem; color: rgb(78, 78, 78);">2 days ago</span>
-   <a href="PostInfo.html" class="comments"><ion-icon name="pencil-outline" style="transform: translateY(2px);"></ion-icon> (2) Comments</a>
-   <a href=""> <span class="tag">tag1</span></a>
-   <a href=""> <span class="tag">tag1</span></a>
-   <a href=""> <span class="tag">tag1</span></a>
-   <br>
-   <hr>
-   <div id="CommentsContainer">
-    <img src="JohnSnow.jpg" alt="">
-    <span>rrrxmy</span>
-    <br>
-    <span class="commentText">i really liked this photo</span> <br> <br>
-    <img src="JohnSnow.jpg" alt="">
-    <span>rrrxmy</span>
-    <br>
-    <span class="commentText">i really liked this photo</span> <br> <br>
-    <img src="JohnSnow.jpg" alt="">
-    <span>rrrxmy</span> <br>
-    <span class="commentText">i really liked this photo</span> <br> <br>
-   </div>
-  </div> <br> <br>
+
  </section>
+ <div id="errorMessage">
+   <h5 id="message" style="transform: translateY(0.5rem); "></h5>
+</div>
 </body>
+<script src="PostInfoScript.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>

@@ -8,122 +8,103 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
  <title>Home</title>
 </head>
 <body>
-
- <nav>
-  <img id="logo" src="rrrxmyy-high-resolution-logo-white-on-transparent-background.png" alt="" width="100px">
-  <ul>
-   <li><a class="sidebar"href="index.html"> <ion-icon name="home-outline"></ion-icon> Home</a></li> <br>
-   <li ><a href="profile.html" class="sidebar"><ion-icon name="person-outline"></ion-icon> Profile</a></li><br>
-   <li onclick="LoginPopup()"><a id="login"><ion-icon name="log-out-outline"></ion-icon> Login</a></li><br>
-   <li onclick="registerPopup()"><a id="login" style="padding: 0.8rem 7.7rem 0.8rem 1rem;"><ion-icon name="log-out-outline"></ion-icon> register</a></li><br>
-  </ul>
-
-  <!-- <div id="Profile">
-     <img src="JohnSnow.jpg" alt="" width="40px">
-     <span>@rrrxmyy</span>
-  </div> -->
- </nav>
-
- <section class="PostsContainer">
-   <a href="PostInfo.html">
-    <div class="Post">
-       <span class="PostUser">
-        <img src="JohnSnow.jpg" alt="" width="40px">
-        <span>@rrrxmyy</span><br> <br>
-        <span>me with ouail my best bitch i really love his fat ass</span>
-       </span>
-       <img class="postImage" src="image_viber_2022-05-02_15-59-09-708.jpg" alt="PostPhoto" width="50%">
-       <span style="position: relative;top: 1rem; left: 1.5rem; color: rgb(78, 78, 78);">2 days ago</span>
-       <a href="PostInfo.html" class="comments"><ion-icon name="pencil-outline" style="transform: translateY(2px);"></ion-icon> (2) Comments</a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-      </div>
-   </a>
-      <br>
-    <div class="Post">
-       <span class="PostUser">
-        <img src="JohnSnow.jpg" alt="" width="40px">
-        <span>@rrrxmyy</span><br> <br>
-        <span>me with ouail my best bitch i really love his fat ass</span>
-       </span>
-       <img class="postImage" src="troll 1.jpg" alt="PostPhoto" width="50%">
-       <span style="position: relative;top: 1rem; left: 1.5rem; color: rgb(78, 78, 78);">2 days ago</span>
-       <a href="" class="comments"><ion-icon name="pencil-outline" style="transform: translateY(2px);"></ion-icon> (2) Comments</a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-      </div>
-      <br>
-    <div class="Post">
-       <span class="PostUser">
-        <img src="JohnSnow.jpg" alt="" width="40px">
-        <span>@rrrxmyy</span><br> <br>
-        <span>me with ouail my best bitch i really love his fat ass</span>
-       </span>
-       <img class="postImage" src="troll 2.jpg" alt="PostPhoto" width="50%">
-       <span style="position: relative;top: 1rem; left: 1.5rem; color: rgb(78, 78, 78);">2 days ago</span>
-       <a href="" class="comments"><ion-icon name="pencil-outline" style="transform: translateY(2px);"></ion-icon> (2) Comments</a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-       <a href=""> <span class="tag">tag1</span></a>
-      </div>
-      <br>
-
-
-
-      <!-- <span class="addPost"><ion-icon name="add-outline" id="plusIcon"></ion-icon></span> -->
-      
-
-      <!------------------------Login popoup---------------------->
-     
-      <div class="loginPopUp">
-         <span style=" position: relative; top: 4rem;">Login</span> <br>
-         <ion-icon name="close-outline" onclick="exit()" id="exitIcon"></ion-icon>
-         <ion-icon name="mail-outline" ></ion-icon>
-         <input type="text" id="username"> <br> <br> <br>
-         <label for="" id="user">Username</label><br> 
-         <ion-icon name="lock-closed-outline" id="lockIcon"></ion-icon>
-         <input type="password" id="password"> <br>
-         <label for="password" id="pass">password</label> <br>
-         <span id="checkbox">
-            <input type="checkbox">
-            <label for="checkbox">Remember me <a href="" style="  font-weight: 550; color: rgb(179, 179, 179); ">Forget password ?</a> </label>
-         </span>
-         <button id="loginBtn">Log in</button>
-
-         <span>Don't have a account <a href="">register</a></span>
-      </div> 
-      
-
-      <!------------------------register popoup---------------------->
-      <div id="registerPopUp">
-         <span style=" position: relative; top: 3rem; font-size: 25px;">Register</span> <br>
-         <ion-icon name="close-outline" onclick="exit()"></ion-icon>
-         <button id="UploadBtn">Upload Profile Picture</button>
-         <input type="file" id="fileInput"> <br>
-         <span>
-            <input type="text"><br> <br> <br>
-            <label for="">First Name</label><br>
-         </span>
-         <span>
-            <input type="text"><br> <br> <br>
-            <label for="">Username</label><br>
-         </span>
-         <span>
-            <input type="password"><br> <br> <br>
-            <label for="">Password</label>
-         </span>
-      </div>
-   
-   
+<div class="overlay"></div>
+<nav id="sidebar">
+   <img id="logo" src="rrrxmyy-high-resolution-logo-white-on-transparent-background.png" alt="" width="100px">
+   <ul>
+    <li><a class="sidebar"href="index.html"> <ion-icon name="home-outline"></ion-icon> Home</a></li> <br>
+    <li onclick="fromwhere(0)"><a href="profile.html" class="sidebar"><ion-icon name="person-outline"></ion-icon> Profile</a></li><br>
+    <li onclick="LoginPopup()"><a id="login"><ion-icon name="log-out-outline"></ion-icon> Login</a></li><br>
+    <li onclick="registerPopup()"><a id="login" style="padding: 0.8rem 7.7rem 0.8rem 1rem;"><ion-icon name="log-out-outline"></ion-icon> register</a></li><br>
+   </ul>
+  </nav>
+ <section id="PostsContainer">
+    
    </section>
+     <!-- -------------------ADD NEW POST MODAL--------------------------------------- -->
+        
+     <span onclick="addPost()" id="addPost" style="visibility: hidden;"><ion-icon name="add-outline" id="plusIcon"></ion-icon></span>
+        
+     <div id="addPostPopUp">
+        <span>New Post</span> <br>
+        <ion-icon name="close-outline" onclick="exit()"></ion-icon> <br> <hr>
+        <input type="text" id="titleNP">
+        <label for="titleNP">Title</label> <br>
+        <textarea name="description" placeholder="Description" id="description" cols="40" rows="4" id ></textarea> <br>
+        <button id="UploadImagePost">Upload Profile Picture</button>
+        <input type="file" placeholder="Title" id="image"> <br>
+        <button id="addnewPost-btn" onclick="creatPost()">Share Post</button>
+        
+     </div>
+
+     <!-- ------------Edit Post Modal------------------------------- -->
+
+     <div id="editPostPopUp">
+      <span >Edit Post</span> <br>
+      <ion-icon name="close-outline" onclick="exit()"></ion-icon> <br> <hr>
+      <input type="text" id="titleEP">
+      <label for="titleEP">Title</label> <br>
+      <textarea name="description" placeholder="Description" id="descriptionE" cols="40" rows="4" id ></textarea> <br>
+      <button id="UploadImagePostE">Upload Profile Picture</button>
+      <input type="file" placeholder="Title" id="imageE"> <br>
+      <button id="editnewPost-btn" onclick="edit()">Edit Post</button>
+      
+   </div>
+   <!------------------------Login popoup--------------------------------->
+       
+   <div class="loginPopUp">
+    <span style=" position: relative; top: 4rem;">Login</span> <br>
+    <ion-icon name="close-outline" onclick="exit()" id="exitIcon"></ion-icon>
+    <ion-icon name="mail-outline" ></ion-icon>
+    <input type="text" id="username"> <br> <br> <br>
+    <label for="" id="user">Username</label><br> 
+    <ion-icon name="lock-closed-outline" id="lockIcon"></ion-icon>
+    <input type="password" id="password"> <br>
+    <label for="password" id="pass">password</label> <br>
+    <span id="checkbox">
+       <input type="checkbox" id="chekcbox">
+       <label for="checkbox">Remember me <a href="" style="  font-weight: 550; color: rgb(179, 179, 179); ">Forget password ?</a> </label>
+    </span>
+    <button class="loginBtn" onclick="Login()">Log in</button>
+
+    <span id="dontHaveAccount">Don't have a account <a style="cursor:pointer;" onclick="exitFromLogin()" on>register</a></span>
+ </div> 
+ 
+
+ <!------------------------register popoup------------------------------>
+
+ <div id="registerPopUp">
+    <span style=" position: relative; top: 3rem; font-size: 25px;">Register</span> <br>
+    <ion-icon name="close-outline" onclick="exit()"></ion-icon>
+    <button id="UploadBtn">Upload Profile Picture</button>
+    <input type="file" id="fileInput"> <br>
+    <span>
+       <input type="text" id="firstNameValue"><br> <br> <br>
+       <label for="">First Name</label><br>
+    </span>
+    <span>
+       <input type="text" id="usernameVlaue"><br> <br> <br>
+       <label for="">Username</label><br>
+    </span>
+    <span>
+       <input type="password" id="passwordValue"><br> <br> <br>
+       <label for="">Password</label> <br>
+       <button id="regisBtn" class="loginBtn" onclick="register()" style="transform: translateY(-0.3rem);">SignUp</button>
+    </span>
+ </div>
+ <div id="errorMessage">
+    <h5 id="message" style="transform: translateY(1rem);"></h5>
+ </div>
+   <br>
+
+   <img src="Dual Ball-1s-200px (1).svg" alt="" id="loading">
 
 
-
+   
 </body>
 
 <script src="script.js"></script>

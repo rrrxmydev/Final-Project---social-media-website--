@@ -29,7 +29,7 @@ nav{
  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .sidebar:hover{
- background-color: #865DFF;
+ background-color: #57606f;
  color: white;
 }
 
@@ -90,17 +90,17 @@ nav li{
 }
 
 .PostsContainer{
- position: relative;
- left: 20%;
- height: 100vh;
- width: 80%;
+  position: relative;
+  left: 20%;
+  width: 80%;
+  /* height:120vh ; */
 }
 .Post{
  background-color: rgb(255, 255, 255);
  box-shadow: 6px 6px 21px -5px;
  border-radius: 8px;
  width:60% ;
- height: 137%;
+ height: 144%;
  overflow: hidden;
  position: relative;
  left: 25%;
@@ -120,9 +120,11 @@ nav li{
 }
 
 .PostUser img{
- border-radius: 50%;
- transform: translate(1.5rem,0.8rem);
- cursor: pointer;
+  border-radius: 50%;
+  width:45px;
+  height:45px;
+  transform: translate(1.5rem,0.8rem);
+  cursor: pointer;
 }
 
 .PostUser span{
@@ -160,6 +162,7 @@ nav li{
  background-color: #61959736;
  padding: 1rem;
  border-radius: 10px;
+ margin-bottom: 100px;
 }
 #CommentsContainer img{
  transform: translateY(0.8rem);
@@ -173,3 +176,92 @@ nav li{
  /* left: 1rem; */
  font-size: 13px;
 }
+
+.Commentinput{
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  height: 3rem;
+  outline: none;
+  padding-left: 5px;
+}
+
+.send-btn{
+  width: 60px;
+  height: 2.7rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #0984e3;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 39.5vw;
+}
+
+.commentUserImage{
+  border-radius: 50%;
+  width:35px;
+  height:35px;
+  transform: translate(1.5rem,0.8rem);
+  cursor: pointer;
+}
+
+#errorMessage{
+  width: 500px;
+  height: 50px;
+  background: #2ad254;
+  color: white;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 1rem;
+  left: 15rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(5rem) scale(0.1);
+  z-index: 5;
+  /* transform: scale(1); */
+}
+#message{
+  position: relative;
+  top: 0.5rem;
+}
+#LogOutBtn{
+  background-color: aliceblue;
+  margin-left:-1rem ;
+  padding: 0.8rem 8rem 0.8rem 1rem;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  top: 8rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+ }
+ 
+ #LogOutBtn:hover{
+  background-color: rgb(217, 25, 25);
+  color: white ;
+ }
+ #addPost{
+  background-color: #4000ff;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+   left: 90%;
+   top: 90%;
+   z-index: 2;
+   color: white;
+ }
+ 
+ #plusIcon{
+  transform: translateY(0.6rem);
+ }
